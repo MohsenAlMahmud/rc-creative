@@ -1,7 +1,18 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
 
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleSignOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
+
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -14,6 +25,8 @@ const Navbar = () => {
                             <li><NavLink to='/'>Home</NavLink></li>
                             <li><NavLink to='/services'>Services</NavLink></li>
                             <li><NavLink to='/contacts'>Contacts</NavLink></li>
+                            <li><NavLink to='/login'>Login</NavLink></li>
+                            <li><NavLink to='/register'>Register</NavLink></li>
                         </ul>
                     </div>
                     <img className="w-32 h-16" src="https://i.ibb.co/HGtC6sP/48620303.jpg" alt="" />
@@ -23,14 +36,22 @@ const Navbar = () => {
                         <li><NavLink to='/'>Home</NavLink></li>
                         <li><NavLink to='/services'>Services</NavLink></li>
                         <li><NavLink to='/contacts'>Contacts</NavLink></li>
+                        <li><NavLink to='/login'>Login</NavLink></li>
+                        <li><NavLink to='/register'>Register</NavLink></li>
 
 
 
 
                     </ul>
                 </div>
+
                 <div className="navbar-end">
-                    <Link><button className="btn btn-ghost">Login</button></Link>
+                    {
+                        user ?
+                            <button onClick={handleSignOut} className="btn btn-ghost">Sign Out</button>
+                            :
+                            <Link><button className="btn btn-ghost">Login</button></Link>
+                    }
                 </div>
             </div>
         </div>
