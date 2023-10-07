@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "LED WALL SCREEN",
+        "img": "https://example.com/smartphone.jpg"
+    },
+    {
+        "id": 2,
+        "name": "PROJECTOR RENT",
+        "img": "https://example.com/laptop.jpg"
+    },
+    {
+        "id": 3,
+        "name": "SOUND SYSTEM",
+        "img": "https://example.com/tablet.jpg"
+    },
+    {
+        "id": 4,
+        "name": "LIGHTING SYSTEM",
+        "img": "https://example.com/smartwatch.jpg"
+    },
+    {
+        "id": 5,
+        "name": "PALKI",
+        "img": "https://example.com/camera.jpg"
+    },
+    {
+        "id": 6,
+        "name": "BAND PARTY",
+        "img": "https://example.com/headphones.jpg"
+    },
+    {
+        "id": 7,
+        "name": "GHORAGAARI",
+        "img": "https://example.com/drone.jpg"
+    },
+    {
+        "id": 8,
+        "name": "HAATI RENT",
+        "img": "https://example.com/game-console.jpg"
+    },
+    {
+        "id": 9,
+        "name": "BIRTHDAY DECORATION",
+        "img": "https://example.com/fitness-tracker.jpg"
+    },
+    {
+        "id": 10,
+        "name": "JUMPING CASTLE",
+        "img": "https://example.com/vr-headset.jpg"
+    },
+    {
+        "id": 11,
+        "name": "MASCOT RENTAL",
+        "img": "https://example.com/bluetooth-speaker.jpg"
+    },
+    {
+        "id": 12,
+        "name": "PHOTOGRAPHY SERVICE",
+        "img": "https://example.com/e-reader.jpg"
+    }
+]
