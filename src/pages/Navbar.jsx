@@ -29,10 +29,10 @@ const Navbar = () => {
                             <li><NavLink to='/register'>Register</NavLink></li>
                         </ul>
                     </div>
-                    <img className="w-32 h-16" src="https://i.ibb.co/HGtC6sP/48620303.jpg" alt="" />
+                    <img className="w-32 h-16" src="https://i.ibb.co/ByRcwx7/logo.jpg" alt="" />
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-3">
                         <li><NavLink to='/'>Home</NavLink></li>
                         <li><NavLink to='/services'>Services</NavLink></li>
                         <li><NavLink to='/contacts'>Contacts</NavLink></li>
@@ -50,7 +50,7 @@ const Navbar = () => {
                         user ?
                             <button onClick={handleSignOut} className="btn btn-ghost">Sign Out</button>
                             :
-                            <Link><button className="btn btn-ghost">Login</button></Link>
+                            <Link to='/login'><button className="btn btn-ghost">Login</button></Link>
                     }
                 </div>
             </div>

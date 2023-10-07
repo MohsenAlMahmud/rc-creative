@@ -1,22 +1,23 @@
+import { useLoaderData } from "react-router-dom";
+import ServiceCard from "./ServiceCard";
+import Navbar from "./Navbar";
 
 
 
-const Services = ({ services }) => {
-  const { name, img, description, price } = services;
+
+const Services = () => {
+
+  const services = useLoaderData();
+  console.log(services)
 
 
   return (
-    <div className="">
-      <div className="card bg-base-100 shadow-xl">
-        <figure><img src={img} alt="picture" /></figure>
-        <div className="card-body">
-          <h2 className="card-title">{name}</h2>
-          <p>{description}</p>
-          <p>{price}</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
+    <div className="w-9/12 mx-auto">
+      <Navbar></Navbar>
+      <div className="grid grid-cols-3 gap-4 w-full mx-auto mt-12">
+        {
+          services.map(service => <ServiceCard key={service.id} services={service}></ServiceCard>)
+        }
       </div>
     </div>
   );
