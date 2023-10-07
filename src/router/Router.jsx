@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ServicesDetails from "../pages/ServicesDetails";
 import PrivateRoute from "./PrivateRoute";
+import Page404 from "../pages/Page404";
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
         {
             path: '/register',
             element: <Register></Register>,
+            
+        },
+        {
+            path: '/*',
+            element: <Page404></Page404>,
             
         },
       ]
