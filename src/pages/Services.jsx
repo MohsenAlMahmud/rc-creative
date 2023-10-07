@@ -16,7 +16,7 @@ const Services = () => {
       <Navbar></Navbar>
       <div className="grid grid-cols-3 gap-4 w-full mx-auto mt-12">
         {
-          services.map(service => <ServiceCard key={service.id} services={service}></ServiceCard>)
+          services.map(service => <ServiceCard key={service.id} service={service}></ServiceCard>)
         }
       </div>
     </div>

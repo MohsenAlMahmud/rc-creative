@@ -2,9 +2,14 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from "../firebase/firebase.config";
 
 
 const Login = () => {
+
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider()
 
     const {signIn} = useContext(AuthContext);
 
@@ -12,7 +17,18 @@ const Login = () => {
 
     const navigate = useNavigate();
 
-    console.log('location in the login page', location)
+    console.log(location)
+
+    const handleGoogleSignIn = () =>{
+        signInWithPopup(auth, provider)
+        .then(result =>{
+            const user = result.user;
+            console.log(user)
+        })
+        .catch(error =>{
+            console.error(error)
+        })
+    }
 
     const handleLogin = e =>{
         e.preventDefault();
@@ -54,8 +70,12 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
                             </div>
+                            
                         </form>
                         <p className="text-center mt-4">Do not have an account? <Link to='/register' className="text-blue-500">Register</Link></p>
+                        <div className="w-1/2 mx-auto">
+                            <button onClick={handleGoogleSignIn} className="btn btn-accent w-full mt-4">Google Login</button>
+                        </div>
         </div>
     );
 };
