@@ -7,6 +7,8 @@ import Register from "../pages/Register";
 import ServicesDetails from "../pages/ServicesDetails";
 import PrivateRoute from "./PrivateRoute";
 import Page404 from "../pages/Page404";
+import JobForm from "../pages/JobForm";
+import EventBookingForm from "../pages/EventBookingForm";
 
 
 const router = createBrowserRouter([
@@ -38,6 +40,16 @@ const router = createBrowserRouter([
         {
             path: '/register',
             element: <Register></Register>,
+            
+        },
+        {
+            path: '/jobForm',
+            element: <PrivateRoute><JobForm></JobForm></PrivateRoute>,
+            
+        },
+        {
+            path: '/eventBookingForm',
+            element: <PrivateRoute><EventBookingForm></EventBookingForm></PrivateRoute>,
             
         },
         {

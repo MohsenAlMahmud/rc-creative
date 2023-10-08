@@ -3,7 +3,7 @@
 const Gadget = ({ gadget }) => {
 
     const { name, img } = gadget;
-    console.log(name)
+    
 
     return (
         <div>

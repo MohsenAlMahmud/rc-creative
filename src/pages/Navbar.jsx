@@ -32,27 +32,25 @@ const Navbar = () => {
                     <img className="w-32 h-16" src="https://i.ibb.co/ByRcwx7/logo.jpg" alt="" />
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-3">
+                    <ul className="menu menu-horizontal">
                         <li><NavLink to='/'>Home</NavLink></li>
                         <li><NavLink to='/services'>Services</NavLink></li>
                         <li><NavLink to='/contacts'>Contacts</NavLink></li>
                         <li><NavLink to='/login'>Login</NavLink></li>
                         <li><NavLink to='/register'>Register</NavLink></li>
-
-
-
-
                     </ul>
                 </div>
 
-                <div className="navbar-end">
+                <div className="navbar-end gap-4">
                     {
                         user ?
-                            <button onClick={handleSignOut} className="btn btn-ghost">Sign Out</button>
+                            <><span>{user.email}</span><span className="w-10 h-10 rounded-full"><img src={user.photoURL ? user.photoURL : "https://i.ibb.co/MSHTpdv/user.jpg" } alt="picture" /></span><button onClick={handleSignOut} className="btn btn-ghost">Sign Out</button></>
+
                             :
                             <Link to='/login'><button className="btn btn-ghost">Login</button></Link>
                     }
                 </div>
+                
             </div>
         </div>
     );

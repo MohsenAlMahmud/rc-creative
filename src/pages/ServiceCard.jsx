@@ -11,7 +11,8 @@ const ServiceCard = ({ service }) => {
                     <h2 className="card-title">{name}</h2>
                     <p>{description}</p>
                     <p>{price}</p>
-                    <div className="card-actions justify-end">
+                    <div className="card-actions justify-between">
+                        <Link to={'/eventBookingForm'}><button className="btn btn-primary">Book Now</button></Link>
                         <Link to={`/services/${id}`}><button className="btn btn-primary">Details</button></Link>
                     </div>
                 </div>

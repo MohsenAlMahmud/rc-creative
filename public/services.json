@@ -15,14 +15,14 @@
     },
     {
       "id": 3,
-      "img": "https://i.ibb.co/twG4JQV/conference.jpg",
+      "img": "https://i.ibb.co/Ns0Z3DV/Anniversaries2.jpg",
       "name": "Anniversaries",
       "description": "Reignite your love story with our anniversary event planning.",
       "price": "$1,000 - $4,000"
     },
     {
       "id": 4,
-      "img": "https://i.ibb.co/XL7yfWN/engagement.jpg",
+      "img": "https://i.ibb.co/NYRj2Vf/Engagement-Parties2.jpg",
       "name": "Engagement Parties",
       "description": "Begin your journey to forever with a memorable engagement party.",
       "price": "$800 - $3,000"
@@ -36,7 +36,7 @@
     },
     {
       "id": 6,
-      "img": "https://i.ibb.co/Q6RrLS3/Baby-shower.jpg",
+      "img": "https://i.ibb.co/Kbzx537/Baby-Shower3.jpg",
       "name": "Baby Shower",
       "description": "Welcome a new life with joy and excitement through our baby shower planning.",
       "price": "$400 - $1,500"

@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../firebase/firebase.config";
@@ -20,14 +20,12 @@ const Login = () => {
 
     console.log(location)
 
-    // const [userProfile, setUserProfile] = useState(null);
-
+    
     const handleGoogleSignIn = () => {
         signInWithPopup(auth, provider)
             .then(result => {
                 const user = result.user;
-                Swal.fire('Any fool can use a computer')
-                // setUserProfile(user);
+                Swal.fire('You are successfully login')                
                 // Swal.fire('Congratulation')
                 navigate(location?.state ? location.state : '/');
             })
@@ -47,8 +45,7 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 Swal.fire('You are successfully login')
-                // console.log(result.user);
-                // setUserProfile(result.user);
+                // console.log(result.user);               
                 navigate(location?.state ? location.state : '/');
             })
             .catch(error => {
@@ -81,14 +78,6 @@ const Login = () => {
                 </div>
 
             </form>
-
-            {/* {userProfile && (
-                <div className="text-center mt-4">
-                    <p>Welcome, {userProfile.displayName}!</p>
-                    <img src={userProfile.photoURL} alt={userProfile.displayName} />
-                </div>
-            )} */}
-
             <p className="text-center mt-4">Do not have an account? <Link to='/register' className="text-blue-500">Register</Link></p>
             <div className="w-1/2 mx-auto">
                 <button onClick={handleGoogleSignIn} className="btn btn-accent w-full mt-4">Google Login</button>
