@@ -2,61 +2,61 @@
     {
         "id": 1,
         "name": "LED WALL SCREEN",
-        "img": "https://example.com/smartphone.jpg"
+        "img": "https://i.ibb.co/PMHgfzK/led.jpg"
     },
     {
         "id": 2,
         "name": "PROJECTOR RENT",
-        "img": "https://example.com/laptop.jpg"
+        "img": "https://i.ibb.co/Sdz9GjG/projector.jpg"
     },
     {
         "id": 3,
         "name": "SOUND SYSTEM",
-        "img": "https://example.com/tablet.jpg"
+        "img": "https://i.ibb.co/9NTkP30/sound-system.jpg"
     },
     {
         "id": 4,
         "name": "LIGHTING SYSTEM",
-        "img": "https://example.com/smartwatch.jpg"
+        "img": "https://i.ibb.co/yyJ2Bmx/light.jpg"
     },
     {
         "id": 5,
         "name": "PALKI",
-        "img": "https://example.com/camera.jpg"
+        "img": "https://i.ibb.co/FBt6h1Y/palki2.webp"
     },
     {
         "id": 6,
         "name": "BAND PARTY",
-        "img": "https://example.com/headphones.jpg"
+        "img": "https://i.ibb.co/801fpS4/band-party.jpg"
     },
     {
         "id": 7,
         "name": "GHORAGAARI",
-        "img": "https://example.com/drone.jpg"
+        "img": "https://i.ibb.co/yPFq9yx/horse-ride.webp"
     },
     {
         "id": 8,
         "name": "HAATI RENT",
-        "img": "https://example.com/game-console.jpg"
+        "img": "https://i.ibb.co/dWWFt20/34.jpg"
     },
     {
         "id": 9,
         "name": "BIRTHDAY DECORATION",
-        "img": "https://example.com/fitness-tracker.jpg"
+        "img": "https://i.ibb.co/nQVcqMw/bday.jpg"
     },
     {
         "id": 10,
         "name": "JUMPING CASTLE",
-        "img": "https://example.com/vr-headset.jpg"
+        "img": "https://i.ibb.co/z7njWsJ/jumping.jpg"
     },
     {
         "id": 11,
         "name": "MASCOT RENTAL",
-        "img": "https://example.com/bluetooth-speaker.jpg"
+        "img": "https://i.ibb.co/zsPCxLr/mascot.jpg"
     },
     {
         "id": 12,
         "name": "PHOTOGRAPHY SERVICE",
-        "img": "https://example.com/e-reader.jpg"
+        "img": "https://i.ibb.co/2yhmLsZ/camera.jpg"
     }
 ]

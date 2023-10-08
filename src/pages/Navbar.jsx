@@ -44,10 +44,10 @@ const Navbar = () => {
                 <div className="navbar-end gap-4">
                     {
                         user ?
-                            <><span>{user.email}</span><span className="w-10 h-10 rounded-full"><img src={user.photoURL ? user.photoURL : "https://i.ibb.co/MSHTpdv/user.jpg" } alt="picture" /></span><button onClick={handleSignOut} className="btn btn-ghost">Sign Out</button></>
+                            <><span>{user.email}</span><span className="w-10 h-10 rounded-full"><img className="w-24 rounded-full" src= { user.photoURL ? user.photoURL : "https://i.ibb.co/MSHTpdv/user.jpg" } alt="picture" /></span><button onClick={handleSignOut} className="btn btn-ghost">Sign Out</button></>
 
                             :
-                            <Link to='/login'><button className="btn btn-ghost">Login</button></Link>
+                            <Link to='/login'><button className="btn btn-ghost">Login</button></Link>  
                     }
                 </div>
                 

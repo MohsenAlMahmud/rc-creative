@@ -26,7 +26,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 Swal.fire('You are successfully login')                
-                // Swal.fire('Congratulation')
+                
                 navigate(location?.state ? location.state : '/');
             })
             .catch(error => {
@@ -45,7 +45,7 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 Swal.fire('You are successfully login')
-                // console.log(result.user);               
+                              
                 navigate(location?.state ? location.state : '/');
             })
             .catch(error => {
