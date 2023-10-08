@@ -50,6 +50,7 @@ const Login = () => {
             })
             .catch(error => {
                 console.error(error)
+                Swal.fire('Invalid User')
             })
     }
 

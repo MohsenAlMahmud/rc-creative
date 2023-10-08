@@ -1,12 +1,14 @@
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import Swal from "sweetalert2";
 
 
 const Register = () => {
 
+    const [registerError, setRegisterError] = useState('');
+    const [success, setSuccess] = useState('');
     const { createUser } = useContext(AuthContext);
 
     const navigate = useNavigate()
@@ -19,12 +21,24 @@ const Register = () => {
         const email = form.get('email');
         const password = form.get('password');
         console.log(name, email, password);
+        setRegisterError('');
 
-        
+        if(password.length < 6){
+            setRegisterError();
+            Swal.fire('use 6 character')
+            return;
+        }else if(!/[A-Z]/.test(password)){
+            setRegisterError();
+            Swal.fire('use atleast 1 capital letter')
+            return;
+        }else if(!/[#$%&]/.test(password)){
+            setRegisterError();
+            Swal.fire('use at-least 1 special character')
+            return;
+        }
 
         createUser(email, password)
-            .then(result => {
-                
+            .then(result => {                
                 Swal.fire('You registered successfully')
                 navigate('/');
             })

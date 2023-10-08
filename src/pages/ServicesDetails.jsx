@@ -15,11 +15,11 @@ const ServicesDetails = () => {
         <div className="w-9/12 mx-auto">
             <Navbar></Navbar>
             <div>
-                <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src={service.img} alt="picture" /></figure>
+                <div className="card bg-base-100 shadow-xl">
+                    <figure><img className="" src={service.img} alt="picture" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">{service.name}</h2>
-                        <p>{service.description}</p>
+                        <p>{service.details}</p>
                         
                     </div>
                 </div>
