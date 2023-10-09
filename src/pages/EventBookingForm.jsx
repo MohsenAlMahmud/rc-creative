@@ -3,11 +3,11 @@ import Navbar from "./Navbar";
 
 const EventBookingForm = () => {
     return (
-        <div>
+        <div className="w-9/12 mx-auto">
             <Navbar></Navbar>
             <div>
                 <h2 className="text-4xl text-center py-16">Event Request Form</h2>
-                <form className="w-1/2 mx-auto">
+                <form className="lg:w-1/2 mx-auto">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text text-lg font-semibold">Your Name</span>

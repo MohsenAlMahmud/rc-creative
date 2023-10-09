@@ -55,10 +55,10 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className="w-9/12 mx-auto">
             <Navbar></Navbar>
             <h2 className="text-4xl text-center py-16">Please Login</h2>
-            <form onSubmit={handleLogin} className="w-1/2 mx-auto">
+            <form onSubmit={handleLogin} className="lg:w-1/2 mx-auto">
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>

@@ -23,22 +23,22 @@ const Register = () => {
         console.log(name, email, password);
         setRegisterError('');
 
-        if(password.length < 6){
+        if (password.length < 6) {
             setRegisterError();
             Swal.fire('use 6 character')
             return;
-        }else if(!/[A-Z]/.test(password)){
+        } else if (!/[A-Z]/.test(password)) {
             setRegisterError();
             Swal.fire('use atleast 1 capital letter')
             return;
-        }else if(!/[#$%&]/.test(password)){
+        } else if (!/[@ # $ % ^ & * _ - + = : ; , . ? / | ~ ` " ' < >]/.test(password)) {
             setRegisterError();
             Swal.fire('use at-least 1 special character')
             return;
         }
 
         createUser(email, password)
-            .then(result => {                
+            .then(result => {
                 Swal.fire('You registered successfully')
                 navigate('/');
             })
@@ -49,16 +49,22 @@ const Register = () => {
     }
 
     return (
-        <div>
+        <div className="w-9/12 mx-auto">
             <Navbar></Navbar>
             <div>
                 <h2 className="text-4xl text-center py-16">Please Register</h2>
-                <form onSubmit={handleRegister} className="w-1/2 mx-auto">
+                <form onSubmit={handleRegister} className="lg:w-1/2 mx-auto">
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Name</span>
+                            <span className="label-text">First Name</span>
                         </label>
-                        <input type="text" name="name" placeholder="Your Name" className="input input-bordered" required />
+                        <input type="text" name="name" placeholder="First Name" className="input input-bordered" required />
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Last Name</span>
+                        </label>
+                        <input type="text" name="name" placeholder="Last Name" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -74,6 +80,14 @@ const Register = () => {
                         <label className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
+                        <div>
+                            <div className="form-control">
+                                <label className="label justify-start gap-4 cursor-pointer">
+                                    <input type="checkbox" className="checkbox" />
+                                    <span className="label-text">I accept the <Link className="text-blue-500 underline">Terms of Use</Link> & <Link className="text-blue-500 underline">Privacy Policy</Link></span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
                     <div className="form-control mt-6">
                         <button className="btn btn-primary">Register</button>

@@ -21,7 +21,7 @@ const Home = () => {
             <Banner></Banner>
             <div>
                 <h2 className="text-5xl font-bold text-center my-5">Our Popular Event Items</h2>
-                <div className="grid grid-cols-4 gap-4 my-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4 my-5">
 
                     {
                         gadgets.map(gadget => <Gadget key={gadget.id} gadget={gadget}></Gadget>)
