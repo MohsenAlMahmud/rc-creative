@@ -1,14 +1,12 @@
-// import { useLoaderData } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import Footer from "./Footer";
-// import Gadget from "./Gadget";
 import Navbar from "./Navbar";
 import Gadget from "./Gadget";
-import OurEvents from "./OurEvents";
+// import OurEvents from "./OurEvents";
 import WhyChooseUs from "./WhyChooseUs";
 import Feedback from "./Feedback";
-// import Services from "./Services";
+
 
 
 
@@ -32,7 +30,7 @@ const Home = () => {
             </div>
             
 
-            <OurEvents></OurEvents>
+            {/* <OurEvents></OurEvents> */}
             <WhyChooseUs></WhyChooseUs>
             <Feedback></Feedback>
             <Footer></Footer>
